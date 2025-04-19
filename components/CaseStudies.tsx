@@ -2,7 +2,6 @@
 
 import React from "react";
 
-import { motion } from "framer-motion";
 import { TrendingUp, Globe } from "react-feather";
 
 interface CaseStudy {

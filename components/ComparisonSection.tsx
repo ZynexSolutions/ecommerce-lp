@@ -57,12 +57,9 @@ const ComparisonSection = () => {
         {/* Title */}
         <div className="max-w-3xl mb-10 lg:mb-14 mx-auto text-center">
           <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
-            Choose Your Path Forward
+            No Fixed Costs<span className="text-[#ff0]">.</span> No Design
+            Restriction<span className="text-[#ff0]">.</span>
           </h2>
-          <p className="mt-1 text-neutral-400">
-            Staying the course might feel safe, but partnering with us unlocks
-            potential you haven't imagined.
-          </p>
         </div>
         {/* End Title */}
 
@@ -71,7 +68,7 @@ const ComparisonSection = () => {
           {/* Card 1: Without Us (The Old Way) */}
           <div className="flex flex-col bg-neutral-900 border border-neutral-700 shadow-sm rounded-xl p-6 lg:p-8 h-full">
             <h3 className="text-lg font-semibold text-neutral-300 mb-4">
-              Sticking to the Status Quo...
+              Sticking to the your current platform...
             </h3>
             <ul className="space-y-3 text-neutral-400 text-sm lg:text-base">
               {withoutUsPoints.map((point, index) => (
@@ -92,7 +89,7 @@ const ComparisonSection = () => {
             variants={glowAnimation}
           >
             <h3 className="text-lg font-semibold text-white mb-4">
-              Partnering with Preline Agency...
+              Partnering With Zynex Solutions...
             </h3>
             <ul className="space-y-3 text-neutral-200 text-sm lg:text-base">
               {withUsPoints.map((point, index) => (

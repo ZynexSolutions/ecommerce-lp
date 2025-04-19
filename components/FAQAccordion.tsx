@@ -24,7 +24,8 @@ const faqItemsData: AccordionItemProps[] = [
   {
     id: 2,
     question: "Will you handle migrating my store?",
-    answer: "Yes—we migrate your entire store for free. Even for large catalogs, migration usually takes no more than 1 week.",
+    answer:
+      "Yes—we migrate your entire store for free. Even for large catalogs, migration usually takes no more than 1 week.",
     defaultOpen: true, // This one will be open initially
   },
   {
@@ -51,7 +52,7 @@ const FAQSection = () => {
   // State: Store the ID of the currently open item, or null if none are open.
   const [openItemId, setOpenItemId] = useState<string | number | null>(() => {
     // Calculate initial state based on defaultOpen
-    const defaultOpenItem = faqItemsData.find(item => item.defaultOpen);
+    const defaultOpenItem = faqItemsData.find((item) => item.defaultOpen);
     return defaultOpenItem ? defaultOpenItem.id : null;
   });
 
@@ -59,13 +60,13 @@ const FAQSection = () => {
   // If the clicked item is already open, close it (set state to null).
   // If a different item is clicked, open it (set state to its id).
   const handleToggle = (id: string | number) => {
-    setOpenItemId(prevOpenId => (prevOpenId === id ? null : id));
+    setOpenItemId((prevOpenId) => (prevOpenId === id ? null : id));
   };
 
   return (
     // Keep the outer structure and styling as you provided
     <div className="bg-neutral-900">
-      <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
+      <div className="max-w-5xl px-4 xl:px-0 mx-auto">
         {/* Using the exact layout structure from your update */}
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="grid md:grid-cols-5 gap-10">
@@ -97,7 +98,9 @@ const FAQSection = () => {
                     <div
                       key={item.id}
                       // Apply 'active' class based on React state for Preline CSS targeting
-                      className={`hs-accordion${idx === 0 ? " pt-0 pb-3" : " pt-6 pb-3"}${isOpen ? " active" : ""}`}
+                      className={`hs-accordion${
+                        idx === 0 ? " pt-0 pb-3" : " pt-6 pb-3"
+                      }${isOpen ? " active" : ""}`}
                       id={`hs-basic-with-title-and-arrow-stretched-heading-${item.id}`}
                     >
                       <button
@@ -112,7 +115,9 @@ const FAQSection = () => {
                         {item.question}
                         {/* Icon: Rotation based on React state */}
                         <svg
-                          className={`transition-transform duration-300 shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400 ${isOpen ? "rotate-180" : ""}`} // Rotate class based on isOpen
+                          className={`transition-transform duration-300 shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400 ${
+                            isOpen ? "rotate-180" : ""
+                          }`} // Rotate class based on isOpen
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
@@ -129,16 +134,20 @@ const FAQSection = () => {
                       <div
                         id={`hs-basic-with-title-and-arrow-stretched-collapse-${item.id}`}
                         // Content visibility based on React state
-                        className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300${isOpen ? "" : " hidden"}`} // Hidden class based on !isOpen
+                        className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300${
+                          isOpen ? "" : " hidden"
+                        }`} // Hidden class based on !isOpen
                         role="region"
                         aria-labelledby={`hs-basic-with-title-and-arrow-stretched-heading-${item.id}`}
-                      // Optional: Explicit height for transition (might not be needed if Preline handles it via classes)
-                      // style={{ height: isOpen ? undefined : '0px' }}
+                        // Optional: Explicit height for transition (might not be needed if Preline handles it via classes)
+                        // style={{ height: isOpen ? undefined : '0px' }}
                       >
                         {/* Answer content */}
-                        <div className="text-gray-600 dark:text-neutral-400 pb-3"> {/* Added pb-3 to match original likely intent */}
+                        <div className="text-gray-600 dark:text-neutral-400 pb-3">
+                          {" "}
+                          {/* Added pb-3 to match original likely intent */}
                           {/* Render string or ReactNode */}
-                          {typeof item.answer === 'string' ? (
+                          {typeof item.answer === "string" ? (
                             <p>{item.answer}</p>
                           ) : (
                             <div>{item.answer}</div> // Simple div wrapper for ReactNode

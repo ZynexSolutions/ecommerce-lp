@@ -22,27 +22,27 @@ const ClientLogos = () => {
 
             {/* Logo 2: Shopify */}
             <img
-              className="py-3 lg:py-5 w-16 h-auto md:w-24 lg:w-40 text-neutral-400"
+              className="py-3 lg:py-5 w-36 h-auto md:w-24 lg:w-40 text-neutral-400"
               src="/strategy.svg"
             ></img>
 
             <img
-              className="py-3 lg:py-5 w-16 h-auto md:w-24 lg:w-40 text-neutral-400"
+              className="py-3 lg:py-5 w-26 h-auto md:w-24 lg:w-40 text-neutral-400"
               src="/lepa.svg"
             ></img>
 
             <img
-              className="py-3 lg:py-5 w-16 h-auto md:w-24 lg:w-32 text-neutral-400"
+              className="py-3 lg:py-5 w-26 h-auto md:w-24 lg:w-32 text-neutral-400"
               src="/synergys.svg"
             ></img>
 
             <img
-              className="py-3 lg:py-5 w-16 h-auto md:w-24 lg:w-32 text-neutral-400"
+              className="py-3 lg:py-5 w-26 h-auto md:w-24 lg:w-32 text-neutral-400"
               src="/hogist.svg"
             ></img>
 
             <img
-              className="py-3 lg:py-5 w-16 h-auto md:w-24 lg:w-28 text-neutral-400"
+              className="py-3 lg:py-5 w-18 h-auto md:w-24 lg:w-28 text-neutral-400"
               src="/silvercastle.svg"
             ></img>
           </div>

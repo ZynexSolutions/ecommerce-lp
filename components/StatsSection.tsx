@@ -123,7 +123,7 @@ const StatsSection = () => {
                     4.9
                   </h3>
                   <p className="mt-1 text-sm sm:text-base text-neutral-400">
-                    Avgerage Rating
+                    Average Rating
                   </p>
                 </div>
               </div>

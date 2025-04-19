@@ -1,42 +1,47 @@
 // app/layout.tsx
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import PrelineInitializer from '@/components/PrelineInitializer';
-import './globals.css';
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import PrelineInitializer from "@/components/PrelineInitializer";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS',
-  description: 'Crafted for agencies and studios specializing in web design and development.',
-  robots: 'max-snippet:-1, max-image-preview:large, max-video-preview:-1',
-  metadataBase: new URL('https://preline.co'),
+  title: "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
+  description:
+    "Crafted for agencies and studios specializing in web design and development.",
+  robots: "max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  metadataBase: new URL("https://preline.co"),
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@preline',
-    creator: '@preline',
-    title: 'Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS',
-    description: 'Crafted for agencies and studios specializing in web design and development.',
-    images: ['/assets/img/og-image.png'],
+    card: "summary_large_image",
+    site: "@preline",
+    creator: "@preline",
+    title:
+      "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
+    description:
+      "Crafted for agencies and studios specializing in web design and development.",
+    images: ["/assets/img/og-image.png"],
   },
   openGraph: {
-    title: 'Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS',
-    description: 'Crafted for agencies and studios specializing in web design and development.',
-    url: '/',
-    siteName: 'Preline',
-    images: [{ url: '/assets/img/og-image.png' }],
-    locale: 'en_US',
-    type: 'website',
+    title:
+      "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
+    description:
+      "Crafted for agencies and studios specializing in web design and development.",
+    url: "/",
+    siteName: "Preline",
+    images: [{ url: "/assets/img/og-image.png" }],
+    locale: "en_US",
+    type: "website",
   },
 };
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
 };
 
@@ -58,7 +63,6 @@ const InitialThemeScript = () => (
     }}
   />
 );
-
 
 export default function RootLayout({
   children,

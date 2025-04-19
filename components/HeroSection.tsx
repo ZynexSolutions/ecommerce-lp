@@ -142,13 +142,15 @@ const HeroSection = () => {
 
           {/* Trustpilot */}
           <div className="text-left">
-            <div className="flex items-center gap-1">
-              <span className="text-green-500 text-xl">★★★★★</span>
-              <span className="font-semibold text-white">Trustpilot</span>
+            <div className="flex items-center gap-0">
+              <span className="text-green-500 text-xl pr-1">★★★★★ </span>
+              <span className="font-semibold text-white">
+                {" " + "Trustpilot"}
+              </span>
             </div>
             <p className="text-sm text-gray-400">
-              Rated Over <span className="font-semibold text-white">15.7k</span>{" "}
-              Reviews
+              <span className="font-semibold text-white">4.9</span> Average
+              Ratings
             </p>
           </div>
         </motion.div>

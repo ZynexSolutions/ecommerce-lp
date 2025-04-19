@@ -1,7 +1,7 @@
 // components/FAQSection.tsx
 "use client"; // Required for useState and event handlers
 
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 // Removed Image import as it's not used in the provided UI structure
 // import Image from "next/image";
 

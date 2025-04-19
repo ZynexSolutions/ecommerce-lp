@@ -2,14 +2,14 @@
 import HeroSection from "@/components/HeroSection";
 import ClientLogos from "@/components/ClientLogos";
 import CaseStudies from "@/components/CaseStudies";
-import Testimonials from "@/components/Testimonials";
+
 import StatsSection from "@/components/StatsSection";
 import ApproachSection from "@/components/ApproachSection";
 import ContactForm from "@/components/ContactForm"; // ContactForm includes its own title etc.
 import FAQAccordion from "@/components/FAQAccordion"; // Adjust import path if needed
 import TestimonialsGrid from "@/components/TestimonialsGrid";
 import ComparisonSection from "@/components/ComparisonSection";
-import Projects from "@/components/Projects";
+
 import TestimonialComplexGrid from "@/components/TestimonialComplexGrid";
 import CaseStudySectionOne from "@/components/CaseStudySectionOne";
 

@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
-import { TrendingUp, DollarSign, Globe } from "react-feather";
+import { TrendingUp, Globe } from "react-feather";
 
 interface CaseStudy {
   id: string;
@@ -70,8 +70,6 @@ const caseStudiesData: CaseStudy[] = [
     link: "#",
   },
 ];
-
-const IconWrapper = motion.div;
 
 const CaseStudies = () => {
   return (

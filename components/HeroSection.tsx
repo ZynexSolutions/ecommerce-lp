@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 

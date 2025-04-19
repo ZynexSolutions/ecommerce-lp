@@ -4,7 +4,7 @@
 import React from "react";
 import Link from "next/link"; // For the CTA button
 import { XIcon, CheckIcon } from "./SvgPatterns/logo";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 // Local data for comparison points
 const withoutUsPoints = [

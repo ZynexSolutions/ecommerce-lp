@@ -1,9 +1,6 @@
-// components/FAQSection.tsx
 "use client"; // Required for useState and event handlers
 
 import React, { useState } from "react";
-// Removed Image import as it's not used in the provided UI structure
-// import Image from "next/image";
 
 // Interface for individual FAQ items (kept locally)
 interface AccordionItemProps {
@@ -64,21 +61,19 @@ const FAQSection = () => {
   };
 
   return (
-    // Keep the outer structure and styling as you provided
     <div className="bg-neutral-900">
-      <div className="max-w-5xl px-4 xl:px-0 mx-auto">
-        {/* Using the exact layout structure from your update */}
+      <div className="max-w-5xl px-4 xl:px-0 pt-10 lg:pt-20 mx-auto">
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="grid md:grid-cols-5 gap-10">
             {/* Left Column: Title */}
             <div className="md:col-span-2">
               <div className="max-w-xs">
-                <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
+                <h2 className="text-2xl font-bold md:text-4xl md:leading-tight text-white">
                   Frequently
                   <br />
                   asked questions
                 </h2>
-                <p className="mt-1 hidden md:block text-gray-600 dark:text-neutral-400">
+                <p className="mt-1 hidden md:block text-neutral-400">
                   Answers to the most frequently asked questions.
                 </p>
               </div>
@@ -87,37 +82,30 @@ const FAQSection = () => {
 
             {/* Right Column: Accordion */}
             <div className="md:col-span-3">
-              {/* Keep Preline's group class and dividers */}
-              <div className="hs-accordion-group divide-y divide-gray-200 dark:divide-neutral-700">
+              <div className="hs-accordion-group divide-y divide-neutral-400">
                 {faqItemsData.map((item, idx) => {
-                  // Determine if the CURRENT item is the one stored in state
                   const isOpen = openItemId === item.id;
 
                   return (
-                    // Keep the item container structure and conditional padding
                     <div
                       key={item.id}
-                      // Apply 'active' class based on React state for Preline CSS targeting
                       className={`hs-accordion${
                         idx === 0 ? " pt-0 pb-3" : " pt-6 pb-3"
                       }${isOpen ? " active" : ""}`}
                       id={`hs-basic-with-title-and-arrow-stretched-heading-${item.id}`}
                     >
                       <button
-                        type="button" // Set type explicitly
-                        className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
-                        // aria-expanded reflects the React state
+                        type="button"
+                        className="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-white rounded-lg transition hover:text-neutral-400 focus:outline-none focus:text-white"
                         aria-expanded={isOpen}
                         aria-controls={`hs-basic-with-title-and-arrow-stretched-collapse-${item.id}`}
-                        // onClick now calls our React state handler
                         onClick={() => handleToggle(item.id)}
                       >
                         {item.question}
-                        {/* Icon: Rotation based on React state */}
                         <svg
-                          className={`transition-transform duration-300 shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400 ${
+                          className={`transition-transform duration-300 shrink-0 size-5 text-white group-hover:text-gray-500 ${
                             isOpen ? "rotate-180" : ""
-                          }`} // Rotate class based on isOpen
+                          }`}
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
                           height="24"
@@ -133,24 +121,17 @@ const FAQSection = () => {
                       </button>
                       <div
                         id={`hs-basic-with-title-and-arrow-stretched-collapse-${item.id}`}
-                        // Content visibility based on React state
                         className={`hs-accordion-content w-full overflow-hidden transition-[height] duration-300${
                           isOpen ? "" : " hidden"
-                        }`} // Hidden class based on !isOpen
+                        }`}
                         role="region"
                         aria-labelledby={`hs-basic-with-title-and-arrow-stretched-heading-${item.id}`}
-                        // Optional: Explicit height for transition (might not be needed if Preline handles it via classes)
-                        // style={{ height: isOpen ? undefined : '0px' }}
                       >
-                        {/* Answer content */}
-                        <div className="text-gray-600 dark:text-neutral-400 pb-3">
-                          {" "}
-                          {/* Added pb-3 to match original likely intent */}
-                          {/* Render string or ReactNode */}
+                        <div className="text-neutral-400 pb-3">
                           {typeof item.answer === "string" ? (
                             <p>{item.answer}</p>
                           ) : (
-                            <div>{item.answer}</div> // Simple div wrapper for ReactNode
+                            <div>{item.answer}</div>
                           )}
                         </div>
                       </div>

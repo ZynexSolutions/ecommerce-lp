@@ -9,9 +9,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
-  description:
-    "Crafted for agencies and studios specializing in web design and development.",
+  title: "Zynex Solutions",
+  description: "Discover the Smart Way to Build a Custom Ecommerce Store.",
   robots: "max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   metadataBase: new URL("https://preline.co"),
   alternates: {
@@ -21,17 +20,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@preline",
     creator: "@preline",
-    title:
-      "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
-    description:
-      "Crafted for agencies and studios specializing in web design and development.",
+    title: "Zynex Solutions",
+    description: "Discover the Smart Way to Build a Custom Ecommerce Store.",
     images: ["/assets/img/og-image.png"],
   },
   openGraph: {
-    title:
-      "Agency Tailwind CSS Template | Preline UI, crafted with Tailwind CSS",
-    description:
-      "Crafted for agencies and studios specializing in web design and development.",
+    title: "Zynex Solutions",
+    description: "Discover the Smart Way to Build a Custom Ecommerce Store.",
     url: "/",
     siteName: "Preline",
     images: [{ url: "/assets/img/og-image.png" }],

@@ -4,6 +4,7 @@
     "": {
       "name": "zynex-final",
       "dependencies": {
+        "appwrite": "^17.0.2",
         "flowbite-react": "^0.11.7",
         "framer-motion": "^12.6.5",
         "lucide-react": "^0.488.0",
@@ -249,6 +250,8 @@
     "ajv": ["ajv@6.12.6", "", { "dependencies": { "fast-deep-equal": "^3.1.1", "fast-json-stable-stringify": "^2.0.0", "json-schema-traverse": "^0.4.1", "uri-js": "^4.2.2" } }, "sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g=="],
 
     "ansi-styles": ["ansi-styles@4.3.0", "", { "dependencies": { "color-convert": "^2.0.1" } }, "sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg=="],
+
+    "appwrite": ["appwrite@17.0.2", "", {}, "sha512-h8frLDRYzFDLS9xA2s8ZSlH/prPFq/ma5477fgQHHLcE/t9RDxNImpq9AleRUb9Oh1YJiP49HCObxgSTGW5AQA=="],
 
     "argparse": ["argparse@2.0.1", "", {}, "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="],
 

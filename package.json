@@ -10,6 +10,7 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "appwrite": "^17.0.2",
     "flowbite-react": "^0.11.7",
     "framer-motion": "^12.6.5",
     "lucide-react": "^0.488.0",

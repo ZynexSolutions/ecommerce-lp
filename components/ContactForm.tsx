@@ -9,6 +9,8 @@ import {
 } from "@/lib/appwrite";
 import { Databases } from "appwrite";
 
+import posthog from 'posthog-js';
+
 // Initialize the database client
 const databases = new Databases(client);
 const DATABASE_ID = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID!;
@@ -53,6 +55,14 @@ const ContactForm = () => {
         created_at: new Date().toISOString(),
         data: JSON.stringify(formData)
       };
+
+      posthog.capture('Contact Form Submitted', {
+        distinct_id: userId,
+        properties: {
+          ...formData,
+          created_at: documentData.created_at,
+        },
+      });
 
       const response = await databases.createDocument(
         DATABASE_ID,

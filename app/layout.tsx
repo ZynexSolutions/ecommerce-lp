@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PrelineInitializer from "@/components/PrelineInitializer";
+import { PostHogProvider } from "@/components/PostHogProvider";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -54,16 +55,14 @@ const InitialThemeScript = () => (
   if (isDark) { html.classList.add('dark'); }
   else { html.classList.add('light'); }
 })();
-`,
+`
     }}
   />
 );
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     // Add suppressHydrationWarning here
     <html lang="en" className="light" suppressHydrationWarning>
@@ -72,10 +71,12 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
       </head>
       <body className={`${inter.className} bg-neutral-900`}>
-        <Header />
-        {children}
-        <Footer />
-        <PrelineInitializer />
+        <PostHogProvider>
+          <Header />
+          {children}
+          <Footer />
+          <PrelineInitializer />
+        </PostHogProvider>
       </body>
     </html>
   );

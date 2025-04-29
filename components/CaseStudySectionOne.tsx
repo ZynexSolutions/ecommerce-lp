@@ -13,7 +13,7 @@ const caseStudyData = {
     { value: "+35%", label: "Revenue Growth" },
     { value: "-48%", label: "Reduction in Cost" },
   ],
-  imageUrl: "/lepaaproducts.svg", // Replace with relevant image
+  imageUrl: "/lepaaproducts.png", // Replace with relevant image
   imageAlt: "Team collaborating on an e-commerce website design",
   linkHref: "#", // Replace with actual case study link later
 };

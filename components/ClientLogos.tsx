@@ -33,7 +33,7 @@ const ClientLogos = () => {
 
             <img
               className="py-3 lg:py-5 w-26 h-auto md:w-24 lg:w-32 text-neutral-400"
-              src="/synergys.svg"
+              src="/synergys.png"
             ></img>
 
             <img

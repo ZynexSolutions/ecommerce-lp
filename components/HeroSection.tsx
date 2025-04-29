@@ -69,23 +69,20 @@ const HeroSection = () => {
           ></motion.span>
         </h1>
         <div className="max-w-3xl mx-auto mt-6">
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
+          <div
             className="text-neutral-400 text-lg md:text-xl leading-relaxed"
           >
             Your brand is special, not just another template. Imagine designing
             your perfect online Ecommerce Store the Sckyrocket your sales.
             You're in charge, and it costs way less in the long run.
-          </motion.p>
+          </div>
         </div>
 
         {/* Centered Sleek Button with More Noticeable Automatic Animation */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
+        <div
+          // initial={{ opacity: 0, y: 20 }}
+          // animate={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           className="mt-10 flex justify-center"
         >
           <motion.button
@@ -105,13 +102,13 @@ const HeroSection = () => {
               />
             </motion.div>
           </motion.button>
-        </motion.div>
+        </div>
 
         {/* Centered Avatar and Trustpilot below the button with subtle animation */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+          transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
           className="mt-8 flex items-center justify-center gap-6"
         >
           {/* Animated Avatars */}

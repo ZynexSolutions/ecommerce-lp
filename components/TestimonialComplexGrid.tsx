@@ -16,7 +16,7 @@ const testimonialData = [
     quote:
       "We used to run our store with Amazon Marketplace, but it costed a significant portion of our revenue. With our new store, we are free from vendor charges and the monthly charges are very minimal. Very impressed with the new store.",
     name: "Naveed Shariff",
-    title: "@snehareddy",
+    title: "@naveedshariff",
     avatarUrl: "/testimonial/img3.jpg",
   },
   {
@@ -49,15 +49,15 @@ const testimonialData = [
     quote:
       "I contacted them regarding a relative's ecommerce business. Zynex offered us a free consultation and a report showing how they could help us. By partnering up with Zynex, we were able to improve our conversion rates by 60% with the number of customers growing every day. Very satisfied with their work.",
     name: "Mounika G.",
-    title: "@nehasharma",
+    title: "@mounikag",
     avatarUrl: "/testimonial/img4.png",
   },
   {
     id: 7,
     quote:
       "Most of our users come from mobile, but our site wasn’t mobile-friendly. Zynex rebuilt it from scratch with a mobile-first approach, and it looks stunning on any device. We saw a 70% increase in mobile sales within the first month",
-    name: "Pragadeesh.",
-    title: "@leonardkrasner",
+    name: "Gokul Prithiv.",
+    title: "@gokulprithiv",
     avatarUrl:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -75,7 +75,7 @@ const testimonialData = [
     quote:
       "Our old store needed tons of paid plugins to function well. Zynex created a tailor-made solution with all features baked in—no more monthly plugin charges. It’s streamlined and way more cost-efficient.",
     name: "Ravi Rohith A.",
-    title: "@floydmiles",
+    title: "@ravirohith",
     avatarUrl: "/testimonial/img2.png",
     hasGlow: true,
   },

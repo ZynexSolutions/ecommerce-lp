@@ -69,9 +69,7 @@ const HeroSection = () => {
           ></motion.span>
         </h1>
         <div className="max-w-3xl mx-auto mt-6">
-          <div
-            className="text-neutral-400 text-lg md:text-xl leading-relaxed"
-          >
+          <div className="text-neutral-400 text-lg md:text-xl leading-relaxed">
             Your brand is special, not just another template. Imagine designing
             your perfect online Ecommerce Store the Sckyrocket your sales.
             You're in charge, and it costs way less in the long run.
@@ -85,23 +83,25 @@ const HeroSection = () => {
           // transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           className="mt-10 flex justify-center"
         >
-          <motion.button
-            className="group bg-[#f5f500] text-black font-medium px-8 py-4 rounded-full text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
-            style={{
-              boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
-            }}
-          >
-            Book Your Consultation Call
-            <motion.div
-              className="overflow-hidden relative w-7 h-7 flex items-center justify-center" // Slightly larger container
-              animate={controls}
+          <a href="https://calendly.com/zynexsolutions/30min" target="_blank">
+            <motion.button
+              className="group bg-[#f5f500] text-black font-medium px-8 py-4 rounded-full text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+              style={{
+                boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
+              }}
             >
-              <ArrowRight
-                size={22} // Slightly larger arrow
-                className="absolute transition-transform duration-300"
-              />
-            </motion.div>
-          </motion.button>
+              Book Your Consultation Call
+              <motion.div
+                className="overflow-hidden relative w-7 h-7 flex items-center justify-center" // Slightly larger container
+                animate={controls}
+              >
+                <ArrowRight
+                  size={22} // Slightly larger arrow
+                  className="absolute transition-transform duration-300"
+                />
+              </motion.div>
+            </motion.button>
+          </a>
         </div>
 
         {/* Centered Avatar and Trustpilot below the button with subtle animation */}

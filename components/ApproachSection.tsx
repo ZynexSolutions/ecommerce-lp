@@ -130,7 +130,8 @@ const ApproachSection = () => {
 
             <a
               className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
-              href="#"
+              href="https://calendly.com/zynexsolutions/30min"
+              target="_blank"
             >
               <svg
                 className="shrink-0 size-4"

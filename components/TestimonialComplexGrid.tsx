@@ -6,47 +6,41 @@ const testimonialData = [
     id: 1,
     quote:
       "We were stuck with a clunky Shopify template. Zynex Solutions rebuilt our site from scratch, and within 2 months, Our store now looks better than ever and I can have all the features I need.",
-    name: "Leslie Alexander",
-    title: "@lesliealexander",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Aarav Mehta",
+    title: "@aaravmehta",
+    avatarUrl: "/testimonial/aimg.png",
     hasGlow: true,
   },
   {
     id: 2,
     quote:
       "We used to run our store with Amazon Marketplace, but it costed a significant portion of our revenue. With our new store, we are free from vendor charges and the monthly charges are very minimal. Very impressed with the new store.",
-    name: "Whitney Francis",
-    title: "@whitneyfrancis",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Naveed Shariff",
+    title: "@snehareddy",
+    avatarUrl: "/testimonial/img3.jpg",
   },
-
   {
     id: 3,
     quote:
       "The level of communication and organization from Zynex was outstanding. They were always punctual, responsive, and kept us informed every step of the way.",
-    name: "Brenna Goyette",
-    title: "@brennagoyette",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Priya Iyer",
+    title: "@priyaiyer",
+    avatarUrl: "/testimonial/img5.png",
   },
   {
     id: 4,
     quote:
       "The team at Zynex truly listened to our needs and built us an ecommerce solution that's both powerful and cost-effective. Highly impressed!",
-    name: "Dries Vincent",
+    name: "Arnold Simon.",
     title: "@driesvincent",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // hasGlow: true,
+    avatarUrl: "/testimonial/img6.png",
   },
   {
     id: 5,
     quote:
       "Our store would lag during traffic spikes, especially during sales. Zynex built a high-performance platform optimized for speed. Now, even during peak times, everything runs smoothly—and our conversion rate jumped",
-    name: "Michael Foster",
-    title: "@michaelfoster",
+    name: "Leonard K.",
+    title: "@leonardkrasner",
     avatarUrl:
       "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -54,28 +48,25 @@ const testimonialData = [
     id: 6,
     quote:
       "I contacted them regarding a relative's ecommerce business. Zynex offered us a free consultation and a report showing how they could help us. By partnering up with Zynex, we were able to improve our conversion rates by 60% with the number of customers growing every day. Very satisfied with their work.",
-    name: "Dries Vincent",
-    title: "@driesvincent",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // hasGlow: true,
+    name: "Mounika G.",
+    title: "@nehasharma",
+    avatarUrl: "/testimonial/img4.png",
   },
   {
     id: 7,
     quote:
       "Most of our users come from mobile, but our site wasn’t mobile-friendly. Zynex rebuilt it from scratch with a mobile-first approach, and it looks stunning on any device. We saw a 70% increase in mobile sales within the first month",
-    name: "Leonard Krasner",
+    name: "Pragadeesh.",
     title: "@leonardkrasner",
     avatarUrl:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // hasGlow: true,
   },
   {
     id: 8,
     quote:
       "We had to rely on developers for every minor update, which slowed us down. Zynex gave us an intuitive backend that anyone on our team can use. We’re way more agile now",
-    name: "Tom Cook",
-    title: "@tomcook",
+    name: "Rajeev M.",
+    title: "@rajeevmenon",
     avatarUrl:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -83,10 +74,9 @@ const testimonialData = [
     id: 9,
     quote:
       "Our old store needed tons of paid plugins to function well. Zynex created a tailor-made solution with all features baked in—no more monthly plugin charges. It’s streamlined and way more cost-efficient.",
-    name: "Floyd Miles",
+    name: "Ravi Rohith A.",
     title: "@floydmiles",
-    avatarUrl:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=320&h=320&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    avatarUrl: "/testimonial/img2.png",
     hasGlow: true,
   },
 ];

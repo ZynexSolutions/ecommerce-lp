@@ -67,6 +67,18 @@ export default function RootLayout({
     // Add suppressHydrationWarning here
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7785CM8JM"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-X7785CM8JM');
+            `
+          }}
+        />
         <InitialThemeScript />
         <link rel="shortcut icon" href="/favicon.ico" />
 

@@ -9,9 +9,9 @@ const testimonialData = [
     id: 1,
     quote:
       "We went from 12 orders a week to 50+. Zynex didn’t just improve our store—they unlocked growth. It’s the best investment we’ve made in years.",
-    name: "Karthik A.",
+    name: "Karthik Aravind.",
     title: "Marketing Director, TechCorp",
-    avatarUrl: "/testimonial/img1.png", // Example avatar
+    avatarUrl: "/testimonial/img1.svg", // Example avatar
   },
   {
     id: 2,

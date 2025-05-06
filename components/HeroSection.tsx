@@ -90,7 +90,7 @@ const HeroSection = () => {
                 boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
               }}
             >
-              Book Your Consultation Call
+              Book Your Free Consultation Call
               <motion.div
                 className="overflow-hidden relative w-7 h-7 flex items-center justify-center" // Slightly larger container
                 animate={controls}
@@ -114,12 +114,12 @@ const HeroSection = () => {
           {/* Animated Avatars */}
           <motion.div animate={avatarControls} className="flex -space-x-3">
             <img
-              src="/assets/avatar1.png"
+              src="/testimonial/img4.png"
               alt="user1"
               className="w-12 h-12 rounded-full border-2 border-white shadow-md"
             />
             <img
-              src="/assets/avatar2.png"
+              src="/testimonial/img3.jpg"
               alt="user2"
               className="w-12 h-12 rounded-full border-2 border-white shadow-md"
             />

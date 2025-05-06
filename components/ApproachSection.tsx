@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ApproachSection = () => {
   return (
-    <div className="bg-neutral-900">
+    <div id="our-approach" className="bg-neutral-900">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:pt-20 mx-auto">
         {/* Title */}
         <div className="max-w-3xl mb-10 lg:mb-14">

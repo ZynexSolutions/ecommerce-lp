@@ -115,7 +115,7 @@ const CaseStudies = () => {
               </div>
               <p className="mt-auto">
                 <span className="font-medium text-sm text-[#ff0] pb-1 border-b-2 border-neutral-700 group-hover:border-[#ff0] group-focus:border-[#ff0] transition focus:outline-none">
-                  Contact Us
+                  <a href="#contact">Contact Us</a>
                 </span>
               </p>
             </a>

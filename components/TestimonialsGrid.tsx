@@ -8,15 +8,15 @@ const testimonialData = [
   {
     id: 1,
     quote:
-      "We went from 12 orders a week to 50+. Zynex didn’t just improve our store—they unlocked growth. It’s the best investment we’ve made in years.",
-    name: "Karthik Aravind.",
-    title: "Marketing Director, TechCorp",
-    avatarUrl: "/testimonial/img1.svg", // Example avatar
+      "Zynex migrated our entire product catalog from WooCommerce to a headless setup using Next.js and Medusa. Our Lighthouse score went from 62 to 98.",
+    name: "Sethil Raj J.",
+    title: "Director, Synergys Primex",
+    avatarUrl: "/testimonial/img8.png", // Example avatar
   },
   {
     id: 2,
     quote:
-      "Our brand finally feels *real*. From the logo to the checkout flow, Zynex nailed it. It’s like they understood our vision even better than we did.",
+      "By partnering up with Zynex, we were able to improve our conversion rates by 60% with the number of customers growing every day. Very satisfied with their work.",
     name: "Pranshu Jha.",
     title: "CEO, Innovate Solutions",
     avatarUrl: "/testimonial/img7.png", // Example avatar

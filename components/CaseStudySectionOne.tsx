@@ -23,7 +23,7 @@ const CaseStudySectionOne = () => {
   // module.exports = { images: { remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }] } };
 
   return (
-    <div className="bg-neutral-900">
+    <div id="recent-works" className="bg-neutral-900">
       <div className="max-w-5xl px-4 xl:px-0 py-10 lg:py-16 mx-auto">
         <div className="max-w-3xl mb-20 lg:mb-24 mx-auto text-center">
           <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
@@ -94,9 +94,10 @@ const CaseStudySectionOne = () => {
               {/* Removed mt-auto as parent div handles spacing */}
               <Link
                 className="group inline-flex items-center justify-center text-center gap-x-2 py-2.5 px-4 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-900 hover:bg-yellow-300 transition whitespace-nowrap" // Added justify-center, text-center, whitespace-nowrap
-                href="#contact"
+                href="https://calendly.com/zynexsolutions/30min"
+                target="_blank"
               >
-                Unlock Your Potential
+                Schedule your consultation call
                 <svg
                   className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
                   xmlns="http://www.w3.org/2000/svg"

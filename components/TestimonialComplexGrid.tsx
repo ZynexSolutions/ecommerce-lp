@@ -32,7 +32,7 @@ const testimonialData = [
     quote:
       "The team at Zynex truly listened to our needs and built us an ecommerce solution that's both powerful and cost-effective. Highly impressed!",
     name: "Arnold Simon.",
-    title: "@driesvincent",
+    title: "@arnoldsimon",
     avatarUrl: "/testimonial/img6.png",
   },
   {
@@ -86,7 +86,7 @@ const TestimonialComplexGrid = () => {
   // module.exports = { images: { remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }] } };
 
   return (
-    <div className="bg-neutral-900 overflow-hidden">
+    <div id="testimonials" className="bg-neutral-900 overflow-hidden">
       {" "}
       {/* Added overflow-hidden for glows */}
       {/* Using container for centering but allowing wider content, adjust max-w if needed */}

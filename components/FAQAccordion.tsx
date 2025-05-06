@@ -61,7 +61,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-neutral-900">
+    <div id="faqs" className="bg-neutral-900">
       <div className="max-w-5xl px-4 xl:px-0 pt-10 lg:pt-20 mx-auto">
         <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
           <div className="grid md:grid-cols-5 gap-10">

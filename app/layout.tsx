@@ -11,9 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Zynex Solutions",
-  description: "Discover the Smart Way to Build a Custom Ecommerce Store.",
+  description:
+    "Discover the Smartest Way to Build your Custom Ecommerce Store.",
   robots: "max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-  metadataBase: new URL("https://preline.co"),
+  metadataBase: new URL("https://zynexsolutions.com"),
   alternates: {
     canonical: "/",
   },
@@ -55,7 +56,7 @@ const InitialThemeScript = () => (
   if (isDark) { html.classList.add('dark'); }
   else { html.classList.add('light'); }
 })();
-`
+`,
     }}
   />
 );
@@ -68,7 +69,10 @@ export default function RootLayout({
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X7785CM8JM"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X7785CM8JM"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -76,7 +80,7 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-X7785CM8JM');
-            `
+            `,
           }}
         />
         <InitialThemeScript />
@@ -103,13 +107,12 @@ export default function RootLayout({
           <img
             height="1"
             width="1"
-            style={{ display: 'none' }}
+            style={{ display: "none" }}
             alt="fbpx"
             src="https://www.facebook.com/tr?id=1948143092656196&ev=PageView&noscript=1"
           />
         </noscript>
         {/* End Meta Pixel Code */}
-
       </head>
       <body className={`${inter.className} bg-neutral-900`}>
         <PostHogProvider>

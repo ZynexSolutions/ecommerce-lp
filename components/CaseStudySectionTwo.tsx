@@ -63,9 +63,10 @@ const CaseStudySectionTwo = () => {
               <div className="mt-auto flex justify-end">
                 <Link
                   className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition" // Adjusted offset color
-                  href="#contact" // Links to contact section ID
+                  href="https://calendly.com/zynexsolutions/30min"
+                  target="_blank" // Links to contact section ID
                 >
-                  Unlock Your Potential
+                  Schedule your consultation call
                   <svg
                     className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
                     xmlns="http://www.w3.org/2000/svg"

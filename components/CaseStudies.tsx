@@ -44,7 +44,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "Boost in Conversions",
     description:
       "Experience a significant uplift in sales with custom site designs optimized for user experience and conversion pathways, averaging a 43% boost after migration.",
-    link: "#",
+    link: "#contact",
   },
   {
     id: "cost-reduction",
@@ -55,7 +55,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "Reduction in Monthly Charges",
     description:
       "Cut down on expensive monthly subscriptions and high transaction fees. On average, businesses save up to 70% in overhead costs by migrating to a custom e-commerce store.",
-    link: "#",
+    link: "#contact",
   },
   {
     id: "organic-traffic",
@@ -66,7 +66,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "Increase in Organic Traffic",
     description:
       "Leverage advanced, tailored SEO strategies unavailable on standard platforms to dramatically improve search rankings and achieve up to a 4X increase in organic traffic.",
-    link: "#",
+    link: "#contact",
   },
 ];
 

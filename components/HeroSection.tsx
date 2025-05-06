@@ -90,7 +90,7 @@ const HeroSection = () => {
                 boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
               }}
             >
-              Book Your Free Consultation Call
+              Book Your Consultation Call
               <motion.div
                 className="overflow-hidden relative w-7 h-7 flex items-center justify-center" // Slightly larger container
                 animate={controls}

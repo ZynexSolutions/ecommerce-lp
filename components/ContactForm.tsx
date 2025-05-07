@@ -312,11 +312,11 @@ const ContactForm = () => {
               <h4 className="text-white font-semibold">Email us:</h4>
               <a
                 className="mt-1 text-neutral-400 hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
-                href="mailto:hello@example.so"
+                href="mailto:social@zynexsolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                business@zynexsolutions.com
+                social@zynexsolutions.com
               </a>
             </div>
           </div>
@@ -344,12 +344,18 @@ const ContactForm = () => {
               <h4 className="text-white font-semibold">Phone & Whatsapp:</h4>
               <a
                 className="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
-                href="mailto:hello@example.so"
+                href="tel:+919176700606"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 +91 9176700606
-                <br />
+              </a>
+              <a
+                className="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
+                href="tel:+918015255485"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 +91 8015255485
               </a>
             </div>

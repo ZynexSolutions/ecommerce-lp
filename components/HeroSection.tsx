@@ -124,12 +124,12 @@ const HeroSection = () => {
               className="w-12 h-12 rounded-full border-2 border-white shadow-md"
             />
             <img
-              src="/assets/avatar3.png"
+              src="/testimonial/img6.jpg"
               alt="user3"
               className="w-12 h-12 rounded-full border-2 border-white shadow-md"
             />
             <img
-              src="/assets/avatar4.png"
+              src="/testimonial/img7.jpg"
               alt="user4"
               className="w-12 h-12 rounded-full border-2 border-white shadow-md"
             />

@@ -350,6 +350,7 @@ const ContactForm = () => {
               >
                 +91 9176700606
               </a>
+              <br/>
               <a
                 className="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
                 href="tel:+918015255485"

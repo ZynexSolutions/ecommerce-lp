@@ -81,22 +81,22 @@ const HeroSection = () => {
           // initial={{ opacity: 0, y: 20 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-          className="mt-10 flex justify-center"
+          className="mt-8 md:mt-10 flex justify-center"
         >
           <a href="https://calendly.com/zynexsolutions/30min" target="_blank">
             <motion.button
-              className="group bg-[#f5f500] text-black font-medium px-8 py-4 rounded-full text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
+              className="group bg-[#f5f500]  text-black font-medium px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-2 md:gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
               style={{
                 boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
               }}
             >
               Book Your Consultation Call
               <motion.div
-                className="overflow-hidden relative w-7 h-7 flex items-center justify-center" // Slightly larger container
+                className="overflow-hidden relative w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
                 animate={controls}
               >
                 <ArrowRight
-                  size={22} // Slightly larger arrow
+                  size={20}
                   className="absolute transition-transform duration-300"
                 />
               </motion.div>
@@ -109,7 +109,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
-          className="mt-8 flex items-center justify-center gap-6"
+          className="mt-12 md:mt-8 flex items-center justify-center gap-6"
         >
           {/* Animated Avatars */}
           <motion.div animate={avatarControls} className="flex -space-x-3">

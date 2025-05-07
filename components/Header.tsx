@@ -77,7 +77,8 @@ const Header = () => {
             <div>
               <a
                 className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden"
-                href="#contact" // Link to contact section ID
+                href="https://calendly.com/zynexsolutions/30min" // Link to contact section ID
+                target="_blank" // Open in new tab
               >
                 Contact us
               </a>

@@ -119,7 +119,8 @@ const CaseStudies = () => {
               </div>
               <p className="mt-auto">
                 <span className="font-medium text-sm text-[#ff0] pb-1 border-b-2 border-neutral-700 group-hover:border-[#ff0] group-focus:border-[#ff0] transition focus:outline-none">
-                  <a href="#contact">Contact Us</a>
+                  {/* <a href="https://calendly.com/zynexsolutions/30min">Contact Us</a> */}
+                  <button className=" text-[#ff0] cursor-pointer">Contact Us</button>
                 </span>
               </p>
             </a>

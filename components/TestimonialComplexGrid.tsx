@@ -97,7 +97,7 @@ const TestimonialComplexGrid = () => {
             Testimonials
           </p>
           <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
-            We have worked with thousands of amazing people
+            We have worked with hundrends of amazing people
           </h2>
         </div>
         {/* End Title */}

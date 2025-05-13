@@ -60,8 +60,10 @@ const HeroSection = () => {
     <div className="bg-neutral-900 pb-8">
       <div className="max-w-5xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-16 text-center">
         <h1 className="font-semibold text-white text-4xl md:text-5xl lg:text-6xl leading-tight">
-          Discover the Smart Way to Build a
-          <span className="text-[#ff0]"> Custom Ecommerce Store.</span>{" "}
+          {/* Discover the Smart Way to Build a
+          <span className="text-[#ff0]"> Custom Ecommerce Store.</span>{" "} */}
+          Reduce your Monthly Ecommerce Costs by {" "}
+          <span className="text-[#ff0]">Upto 70%</span>
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -69,10 +71,14 @@ const HeroSection = () => {
           ></motion.span>
         </h1>
         <div className="max-w-3xl mx-auto mt-6">
-          <div className="text-neutral-400 text-lg md:text-xl leading-relaxed">
+          {/* <div className="text-neutral-400 text-lg md:text-xl leading-relaxed">
             Your brand is special, not just another template. Imagine designing
             your perfect online Ecommerce Store the Sckyrocket your sales.
             You're in charge, and it costs way less in the long run.
+          </div> */}
+          <div className="text-neutral-400 text-lg md:text-xl leading-relaxed">
+            We provide you a fully custom-made E-Commerce Stores which loads faster than any other store
+            and it costs only a fraction of what you are already paying for your current platform.
           </div>
         </div>
 

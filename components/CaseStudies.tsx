@@ -13,6 +13,7 @@ interface CaseStudy {
   title: string;
   description: string;
   link: string;
+  isPrimary: boolean;
 }
 
 function BankNotes() {
@@ -41,10 +42,11 @@ const caseStudiesData: CaseStudy[] = [
     iconColor: "#22C55E",
     backgroundColor: "rgba(34, 197, 94, 0.2)",
     statistic: "43%",
-    title: "Boost in Conversions",
+    title: "More Conversions",
     description:
       "Experience a significant uplift in sales with custom site designs optimized for user experience and conversion pathways, averaging a 43% boost after migration.",
-    link: "#contact",
+    link: "https://calendly.com/zynexsolutions/30min",
+    isPrimary: false,
   },
   {
     id: "cost-reduction",
@@ -55,7 +57,8 @@ const caseStudiesData: CaseStudy[] = [
     title: "Reduction in Monthly Charges",
     description:
       "Cut down on expensive monthly subscriptions and high transaction fees. On average, businesses save up to 70% in overhead costs by migrating to a custom e-commerce store.",
-    link: "#contact",
+    link: "https://calendly.com/zynexsolutions/30min",
+    isPrimary: true,
   },
   {
     id: "organic-traffic",
@@ -66,7 +69,8 @@ const caseStudiesData: CaseStudy[] = [
     title: "Increase in Organic Traffic",
     description:
       "Leverage advanced, tailored SEO strategies unavailable on standard platforms to dramatically improve search rankings and achieve up to a 4X increase in organic traffic.",
-    link: "#contact",
+    link: "https://calendly.com/zynexsolutions/30min",
+    isPrimary: false,
   },
 ];
 
@@ -76,7 +80,7 @@ const CaseStudies = () => {
       <div className="max-w-5xl px-4 xl:px-0 py-24 mx-auto">
         <div className="max-w-3xl mb-10 lg:mb-14">
           <h2 className="text-white font-semibold text-2xl md:text-4xl md:leading-tight">
-            Make your store <span className="text-[#ff0]"> sell 43% more </span>
+            Make your store <span className="text-[#ff0]"> sell more </span>
             today
           </h2>
           <p className="mt-1 text-neutral-400">
@@ -104,7 +108,7 @@ const CaseStudies = () => {
                   />
                 </div>
                 <div className="mt-1 flex items-center">
-                  <p className="font-semibold text-6xl text-white mr-4">
+                  <p className={study.isPrimary ? "font-semibold text-6xl text-[#ecd502] mr-4" : "font-semibold text-6xl text-white mr-4"}>
                     {study.statistic}
                   </p>
                 </div>

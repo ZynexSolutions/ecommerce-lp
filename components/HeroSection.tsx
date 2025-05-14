@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect } from "react"; // Removed useState
 import { ArrowRight } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
+import { useProtectedCalendlyRedirect } from "@/hooks/useProtectedCalendlyRedirect";
 
 const HeroSection = () => {
   const controls = useAnimation();
   const avatarControls = useAnimation();
+  const { triggerRedirect, isRedirecting, redirectError } = useProtectedCalendlyRedirect("hero_book_consultation");
 
   useEffect(() => {
     const arrowSequence = async () => {
@@ -87,27 +89,30 @@ const HeroSection = () => {
           // initial={{ opacity: 0, y: 20 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
-          className="mt-8 md:mt-10 flex justify-center"
+          className="mt-8 md:mt-10 flex flex-col items-center justify-center" // Added flex-col and items-center
         >
-          <a href="https://calendly.com/zynexsolutions/30min" target="_blank">
-            <motion.button
-              className="group bg-[#f5f500]  text-black font-medium px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-2 md:gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2"
-              style={{
-                boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)", // More prominent initial shadow
-              }}
+          <motion.button
+            onClick={triggerRedirect}
+            disabled={isRedirecting}
+            className="group bg-[#f5f500] text-black font-medium px-6 py-3 md:px-8 md:py-4 rounded-full text-base md:text-lg transition-all duration-300 ease-in-out inline-flex items-center gap-2 md:gap-3 shadow-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 disabled:opacity-50"
+            style={{
+              boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)",
+            }}
+          >
+            {isRedirecting ? "Verifying..." : "Book Your Consultation Call"}
+            <motion.div
+              className="overflow-hidden relative w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
+              animate={controls}
             >
-              Book Your Consultation Call
-              <motion.div
-                className="overflow-hidden relative w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
-                animate={controls}
-              >
-                <ArrowRight
-                  size={20}
-                  className="absolute transition-transform duration-300"
-                />
-              </motion.div>
-            </motion.button>
-          </a>
+              <ArrowRight
+                size={20}
+                className="absolute transition-transform duration-300"
+              />
+            </motion.div>
+          </motion.button>
+          {redirectError && (
+            <p className="mt-4 text-red-500 text-sm">{redirectError}</p>
+          )}
         </div>
 
         {/* Centered Avatar and Trustpilot below the button with subtle animation */}

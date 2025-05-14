@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PrelineInitializer from "@/components/PrelineInitializer";
 import { PostHogProvider } from "@/components/PostHogProvider";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -116,10 +117,12 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-neutral-900`}>
         <PostHogProvider>
+          <ReCaptchaProvider>
           <Header />
           {children}
           <Footer />
           <PrelineInitializer />
+          </ReCaptchaProvider>
         </PostHogProvider>
       </body>
     </html>

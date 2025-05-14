@@ -2,9 +2,11 @@
 
 // components/ComparisonSection.tsx
 import React from "react";
-import Link from "next/link"; // For the CTA button
+// import Link from "next/link"; // Replaced by button
 import { XIcon, CheckIcon } from "./SvgPatterns/logo";
 import { motion } from "framer-motion";
+import { useProtectedCalendlyRedirect } from "@/hooks/useProtectedCalendlyRedirect";
+import { ArrowRight } from "lucide-react";
 
 // Local data for comparison points
 const withoutUsPoints = [
@@ -51,6 +53,8 @@ const buttonPulse = {
 };
 
 const ComparisonSection = () => {
+  const { triggerRedirect, isRedirecting, redirectError } = useProtectedCalendlyRedirect("comparison_schedule_consultation");
+
   return (
     <div className="">
       <div className="max-w-5xl px-4 xl:px-0 pt-10 lg:pt-20 mx-auto">
@@ -101,31 +105,20 @@ const ComparisonSection = () => {
             </ul>
 
             {/* CTA Button Area - Subtle Pulse Animation */}
-            <div className="mt-auto pt-6 flex justify-end">
+            <div className="mt-auto pt-6 flex flex-col items-end"> {/* Changed to flex-col items-end */}
               <motion.div variants={buttonPulse} animate="animate">
-                <Link
-                  className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition"
-                  href="https://calendly.com/zynexsolutions/30min"
-                  target="_blank" // Links to contact section ID
+                <button
+                  onClick={triggerRedirect}
+                  disabled={isRedirecting}
+                  className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition disabled:opacity-50"
                 >
-                  Schedule Your Free Consultation
-                  <svg
-                    className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </Link>
+                  {isRedirecting ? "Processing..." : "Schedule Your Free Consultation"}
+                  <ArrowRight className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" />
+                </button>
               </motion.div>
+              {redirectError && (
+                <p className="mt-2 text-red-500 text-xs text-right">{redirectError}</p>
+              )}
             </div>
           </motion.div>
           {/* End Card 2 */}

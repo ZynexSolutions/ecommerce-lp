@@ -1,7 +1,10 @@
 // components/CaseStudySectionOne.tsx
+"use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link"; // Link is replaced
+import { useProtectedCalendlyRedirect } from "@/hooks/useProtectedCalendlyRedirect";
+import { ArrowRight } from "lucide-react";
 
 // Updated Placeholder data with stats
 const caseStudyData = {
@@ -15,10 +18,11 @@ const caseStudyData = {
   ],
   imageUrl: "/lepaaproducts.png", // Replace with relevant image
   imageAlt: "Team collaborating on an e-commerce website design",
-  linkHref: "#", // Replace with actual case study link later
+  // linkHref: "#", // Replace with actual case study link later // Not used
 };
 
 const CaseStudySectionOne = () => {
+  const { triggerRedirect, isRedirecting, redirectError } = useProtectedCalendlyRedirect("casestudy_one_schedule_call");
   // Remember to configure image hostname in next.config.js if using external URLs
   // module.exports = { images: { remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }] } };
 
@@ -87,33 +91,22 @@ const CaseStudySectionOne = () => {
               {/* End Stats Section */}
             </div>
             {/* Links Section - Pushed to bottom */}
-            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4 items-center">
+            <div className="mt-8 flex flex-col items-start flex-wrap gap-x-6 gap-y-4"> {/* Changed to flex-col items-start */}
               {" "}
               {/* Added gap-y, flex-wrap */}
               {/* Primary CTA Button */}
               {/* Removed mt-auto as parent div handles spacing */}
-              <Link
-                className="group inline-flex items-center justify-center text-center gap-x-2 py-2.5 px-4 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-900 hover:bg-yellow-300 transition whitespace-nowrap" // Added justify-center, text-center, whitespace-nowrap
-                href="https://calendly.com/zynexsolutions/30min"
-                target="_blank"
+              <button
+                onClick={triggerRedirect}
+                disabled={isRedirecting}
+                className="group inline-flex items-center justify-center text-center gap-x-2 py-2.5 px-4 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-900 hover:bg-yellow-300 transition whitespace-nowrap disabled:opacity-50"
               >
-                Schedule your consultation call
-                <svg
-                  className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </Link>
+                {isRedirecting ? "Processing..." : "Schedule your consultation call"}
+                <ArrowRight className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" />
+              </button>
+              {redirectError && (
+                <p className="mt-2 text-red-500 text-xs">{redirectError}</p>
+              )}
               {/* Secondary Link */}
               {/* <Link
                                 className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline whitespace-nowrap"

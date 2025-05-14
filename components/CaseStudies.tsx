@@ -1,8 +1,10 @@
 "use client";
 
 import React from "react";
-
 import { TrendingUp, Globe } from "react-feather";
+import { useProtectedCalendlyRedirect } from "@/hooks/useProtectedCalendlyRedirect";
+import { ArrowRight } from "lucide-react";
+
 
 interface CaseStudy {
   id: string;
@@ -12,7 +14,7 @@ interface CaseStudy {
   statistic: string;
   title: string;
   description: string;
-  link: string;
+  // link: string; // No longer using direct link for Calendly CTAs
   isPrimary: boolean;
 }
 
@@ -45,7 +47,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "More Conversions",
     description:
       "Experience a significant uplift in sales with custom site designs optimized for user experience and conversion pathways, averaging a 43% boost after migration.",
-    link: "https://calendly.com/zynexsolutions/30min",
+    // link: "https://calendly.com/zynexsolutions/30min", // Removed
     isPrimary: false,
   },
   {
@@ -57,7 +59,7 @@ const caseStudiesData: CaseStudy[] = [
     title: "Reduction in Monthly Charges",
     description:
       "Cut down on expensive monthly subscriptions and high transaction fees. On average, businesses save up to 70% in overhead costs by migrating to a custom e-commerce store.",
-    link: "https://calendly.com/zynexsolutions/30min",
+    // link: "https://calendly.com/zynexsolutions/30min", // Removed
     isPrimary: true,
   },
   {
@@ -69,12 +71,18 @@ const caseStudiesData: CaseStudy[] = [
     title: "Increase in Organic Traffic",
     description:
       "Leverage advanced, tailored SEO strategies unavailable on standard platforms to dramatically improve search rankings and achieve up to a 4X increase in organic traffic.",
-    link: "https://calendly.com/zynexsolutions/30min",
+    // link: "https://calendly.com/zynexsolutions/30min", // Removed
     isPrimary: false,
   },
 ];
 
 const CaseStudies = () => {
+  const {
+    triggerRedirect,
+    isRedirecting,
+    redirectError
+  } = useProtectedCalendlyRedirect("casestudies_card_contact_us");
+
   return (
     <div className="bg-neutral-900 bg-linear-to-t from-black to-transparent">
       <div className="max-w-5xl px-4 xl:px-0 py-24 mx-auto">
@@ -92,18 +100,18 @@ const CaseStudies = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 items-center border border-neutral-700 divide-y lg:divide-y-0 lg:divide-x divide-neutral-700 rounded-xl">
           {caseStudiesData.map((study) => (
-            <a
+            <div // Changed from <a> to <div>
               key={study.id}
-              href={study.link}
+              // href={study.link} // Removed href
               className="group relative z-10 p-4 md:p-6 h-full flex flex-col bg-neutral-900 focus:outline-none first:rounded-t-xl last:rounded-b-xl lg:first:rounded-l-xl lg:first:rounded-tr-none lg:last:rounded-r-xl lg:last:rounded-bl-none before:absolute before:inset-0 before:bg-gradient-to-b hover:before:from-transparent hover:before:via-transparent hover:before:to-[#ff0]/10 before:via-80% focus:before:from-transparent focus:before:via-transparent focus:before:to-[#ff0]/10 before:-z-1 last:before:rounded-b-xl lg:first:before:rounded-s-xl lg:last:before:rounded-e-xl lg:last:before:rounded-bl-none before:opacity-0 hover:before:opacity-100 focus:before:opacity-100"
             >
               <div className="mb-5">
                 <div
-                  className="relative rounded-full flex items-center justify-center w-12 h-12 mb-4" // Reduced width and height
+                  className="relative rounded-full flex items-center justify-center w-12 h-12 mb-4"
                   style={{ backgroundColor: study.backgroundColor }}
                 >
                   <study.IconComponent
-                    className={`h-6 w-6`} // Reduced icon size
+                    className={`h-6 w-6`}
                     style={{ color: study.iconColor }}
                   />
                 </div>
@@ -119,13 +127,24 @@ const CaseStudies = () => {
               </div>
               <p className="mt-auto">
                 <span className="font-medium text-sm text-[#ff0] pb-1 border-b-2 border-neutral-700 group-hover:border-[#ff0] group-focus:border-[#ff0] transition focus:outline-none">
-                  {/* <a href="https://calendly.com/zynexsolutions/30min">Contact Us</a> */}
-                  <button className=" text-[#ff0] cursor-pointer">Contact Us</button>
+                  <button
+                    onClick={triggerRedirect}
+                    disabled={isRedirecting}
+                    className="text-[#ff0] cursor-pointer bg-transparent border-none p-0 inline-flex items-center gap-x-1 disabled:opacity-50"
+                  >
+                    {isRedirecting ? "Processing..." : "Contact Us"}
+                    {!isRedirecting && <ArrowRight className="shrink-0 size-3.5" />}
+                  </button>
                 </span>
               </p>
-            </a>
+            </div>
           ))}
         </div>
+        {redirectError && (
+          <div className="mt-6 text-center text-red-500 text-sm">
+            {redirectError}
+          </div>
+        )}
       </div>
     </div>
   );

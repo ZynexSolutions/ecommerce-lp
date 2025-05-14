@@ -1,7 +1,10 @@
 // components/CaseStudySectionTwo.tsx
+"use client";
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link"; // Link is replaced by button
+import { useProtectedCalendlyRedirect } from "@/hooks/useProtectedCalendlyRedirect";
+import { ArrowRight } from "lucide-react";
 
 // Placeholder data (can be moved or fetched later if needed)
 const caseStudyData = {
@@ -16,10 +19,11 @@ const caseStudyData = {
   ],
   imageUrl: "/mda.png", // Replace with relevant image
   imageAlt: "Code on a screen representing development workflow",
-  linkHref: "#", // Replace with actual case study link later
+  // linkHref: "#", // Replace with actual case study link later // Not used anymore
 };
 
 const CaseStudySectionTwo = () => {
+  const { triggerRedirect, isRedirecting, redirectError } = useProtectedCalendlyRedirect("casestudy_two_schedule_call");
   // Remember to configure image hostname in next.config.js if using external URLs
   // module.exports = { images: { remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }] } };
 
@@ -58,31 +62,20 @@ const CaseStudySectionTwo = () => {
               ))}
             </div>
             {/* End Stats Section */}
-            <div className="flex gap-6 items-center">
+            <div className="flex flex-col items-start gap-6"> {/* Changed to flex-col and items-start */}
               {/* CTA Button Area - Pushed to bottom */}
-              <div className="mt-auto flex justify-end">
-                <Link
-                  className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition" // Adjusted offset color
-                  href="https://calendly.com/zynexsolutions/30min"
-                  target="_blank" // Links to contact section ID
+              <div className="mt-auto"> {/* Removed flex justify-end, let flex-col handle alignment */}
+                <button
+                  onClick={triggerRedirect}
+                  disabled={isRedirecting}
+                  className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition disabled:opacity-50"
                 >
-                  Schedule your consultation call
-                  <svg
-                    className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12h14" />
-                    <path d="m12 5 7 7-7 7" />
-                  </svg>
-                </Link>
+                  {isRedirecting ? "Processing..." : "Schedule your consultation call"}
+                  <ArrowRight className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" />
+                </button>
+                {redirectError && (
+                  <p className="mt-2 text-red-500 text-xs">{redirectError}</p>
+                )}
               </div>
               {/* <Link
                                 className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline"

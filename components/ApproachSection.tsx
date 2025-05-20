@@ -137,7 +137,7 @@ const ApproachSection = () => {
                 disabled={isRedirecting}
                 className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-hidden disabled:opacity-50"
               >
-                {isRedirecting ? "Processing..." : "Schedule a call"}
+                {isRedirecting ? "Processing..." : "Connect with Us"}
                 <ArrowRight className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1" />
               </button>
               {redirectError && (

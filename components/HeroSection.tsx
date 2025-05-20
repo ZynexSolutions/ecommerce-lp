@@ -99,7 +99,7 @@ const HeroSection = () => {
               boxShadow: "0 6px 12px rgba(245, 245, 0, 0.5)",
             }}
           >
-            {isRedirecting ? "Verifying..." : "Book Your Consultation Call"}
+            {isRedirecting ? "Verifying..." : "Connect with Us"}
             <motion.div
               className="overflow-hidden relative w-6 h-6 md:w-7 md:h-7 flex items-center justify-center"
               animate={controls}

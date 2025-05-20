@@ -359,7 +359,7 @@ const ContactForm = () => {
                   disabled={isCalendlyRedirecting}
                   className="group inline-flex items-center gap-x-2 font-medium text-sm text-[#ff0] decoration-2 hover:underline focus:outline-none focus:underline disabled:opacity-50 bg-transparent border-none p-0 cursor-pointer"
                 >
-                  {isCalendlyRedirecting ? "Processing..." : "Book a Call"}
+                  {isCalendlyRedirecting ? "Processing..." : "Connect with Us"}
                   {!isCalendlyRedirecting && (
                     <ArrowRight className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" />
                   )}

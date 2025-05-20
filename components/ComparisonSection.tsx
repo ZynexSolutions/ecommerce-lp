@@ -112,7 +112,7 @@ const ComparisonSection = () => {
                   disabled={isRedirecting}
                   className="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0]/50 focus:ring-offset-neutral-800 hover:bg-yellow-300 transition disabled:opacity-50"
                 >
-                  {isRedirecting ? "Processing..." : "Schedule Your Free Consultation"}
+                  {isRedirecting ? "Processing..." : "Connect with Us"}
                   <ArrowRight className="shrink-0 size-4 transition group-hover:translate-x-0.5 group-focus:translate-x-0.5" />
                 </button>
               </motion.div>

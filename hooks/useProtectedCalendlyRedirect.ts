@@ -70,11 +70,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-const CALENDLY_LINK = "https://calendly.com/zynexsolutions/30min";
+const CALENDLY_LINK = "https://wa.me/message/KMBSESOWU5Z3C1";
 
-export const useProtectedCalendlyRedirect = () => {
+export const useProtectedCalendlyRedirect = (optional: any) => {
   const router = useRouter();
   const [isRedirecting, setIsRedirecting] = useState(false);
+  const redirectError = null;
 
   const triggerRedirect = () => {
     setIsRedirecting(true);
@@ -84,5 +85,6 @@ export const useProtectedCalendlyRedirect = () => {
   return {
     triggerRedirect,
     isRedirecting,
+    redirectError,
   };
 };

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST() {
   // TEMPORARY: Always return true for testing
   if (process.env.NODE_ENV === "development" || true) {
     // Condition to easily enable/disable
